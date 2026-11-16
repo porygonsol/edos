@@ -1,0 +1,59 @@
+# EdOS
+
+> EdOS is an AI-native learning operating system (OS) for independent learners who want deep, connected understanding and verifiable proof of what they know.
+
+## What is EdOS?
+
+EdOS is a learning platform built around the idea that knowing something and proving you attended a course are fundamentally different things. EdOS helps you:
+
+- **Explore** knowledge from any source — videos, notes, courses, books, or the web
+- **Understand** deeply by building connected knowledge, not just consuming content
+- **Connect** ideas across topics, tools, and projects into a coherent knowledge graph
+- **Prove** your learning through real projects, artifacts, and verifiable mastery evidence
+
+## Key Concepts
+
+### Ediy — Your AI Learning Companion
+Ediy is the AI companion inside EdOS. Ediy is always with you during your learning journey — helping you explore topics, understand concepts, connect ideas across subjects, and prove your mastery through real work.
+
+### Mastery Score
+A Mastery Score is a dynamic, living measure of how deeply you understand a topic. It is based on your actual interactions, projects, and demonstrated knowledge — not on exams attended or time spent in a course.
+
+### Living Proof
+Living Proof is EdOS's system for generating verifiable evidence of learning: projects, artifacts, and demonstrations of understanding that you can share with employers, institutions, or collaborators as real proof of capability.
+
+## How EdOS Works — The Four Steps
+
+1. **Explore** — Bring in what you want to learn from anywhere (videos, articles, courses, notes)
+2. **Understand** — Build a clear and connected understanding of concepts and their relationships
+3. **Connect** — Link ideas across courses, tools, and projects into a unified knowledge graph
+4. **Prove** — Turn your learning into verifiable proof through projects and artifacts
+
+## EdOS vs a Traditional Degree
+
+| Traditional Degree | EdOS |
+|---|---|
+| Courses attended | Concepts understood |
+| Exams cleared | Projects completed |
+| A certificate | Real proof of learning |
+
+## Who Is EdOS For?
+
+- Independent learners who learn from multiple sources
+- Professionals upskilling outside of formal education
+- Students who want proof of understanding beyond grades
+- Anyone who wants to know what they actually know
+
+## Status
+
+EdOS is currently in early access / waitlist phase. Users can join the waitlist at https://edos.porygonsol.com/
+
+## Built By
+
+EdOS is built by Porygon (https://www.porygonsol.com/), a product studio.
+
+## URLs
+
+- Homepage: https://edos.porygonsol.com/
+- Waitlist: https://edos.porygonsol.com/ (click "Join the waitlist")
+- Parent company: https://www.porygonsol.com/

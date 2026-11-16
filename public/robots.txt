@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://edos.porygonsol.com/sitemap.xml
+
+# Block sensitive paths
+Disallow: /api/

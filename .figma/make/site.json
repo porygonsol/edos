@@ -1,0 +1,20 @@
+{
+  "title": "EdOS — Learn Deeply. Know What You Know.",
+  "description": "EdOS is an AI-native learning OS for independent learning, connected understanding, and verifiable proof of what you know. Join the waitlist.",
+  "language": "en",
+  "robots": {
+    "index": true
+  },
+  "icons": {
+    "icon": "/favicon/favicon.svg"
+  },
+  "openGraph": {
+    "image": "https://edos.porygonsol.com/assets/reference.png"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-XXXXXXXXXX"
+  },
+  "accessibility": {
+    "addBypassLinks": true
+  }
+}
