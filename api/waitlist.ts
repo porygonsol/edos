@@ -49,9 +49,12 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   // Send confirmation email via Resend
-  const { error: emailError } = await resend.emails.send({
-    from: "EdOS <hello@edos.porygonsol.com>",
+  // Using resend.dev test domain until edos.porygonsol.com is verified in Resend.
+  // Once domain is verified, change from to: "EdOS <hello@edos.porygonsol.com>"
+  const { data: emailData, error: emailError } = await resend.emails.send({
+    from: "EdOS <onboarding@resend.dev>",
     to: email.trim(),
+    replyTo: "hello@porygonsol.com",
     subject: "You're on the EdOS waitlist!",
     html: `
 <!DOCTYPE html>
@@ -123,8 +126,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   });
 
   if (emailError) {
-    // Don't fail the whole request if email fails — entry is saved
-    console.error("Resend error:", emailError);
+    // Log but don't fail — entry is already saved in DB
+    console.error("Resend error:", JSON.stringify(emailError));
+  } else {
+    console.log("Email sent:", emailData?.id);
   }
 
   return res.status(200).json({ ok: true });
