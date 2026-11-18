@@ -54,75 +54,51 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   const { data: emailData, error: emailError } = await resend.emails.send({
     from: "EdOS <onboarding@resend.dev>",
     to: email.trim(),
-    replyTo: "hello@porygonsol.com",
+    replyTo: "porygonsol@gmail.com",
     subject: "You're on the EdOS waitlist!",
-    html: `
-<!DOCTYPE html>
+    html: `<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>You're on the EdOS waitlist!</title>
-</head>
-<body style="margin:0;padding:0;background:#cce4ff;font-family:'Manrope',system-ui,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#cce4ff;padding:40px 20px;">
-    <tr>
-      <td align="center">
-        <table width="560" cellpadding="0" cellspacing="0" style="max-width:560px;background:white;border-radius:24px;overflow:hidden;box-shadow:0 20px 60px rgba(10,25,90,0.12);">
-          <!-- Header -->
-          <tr>
-            <td style="background:linear-gradient(135deg,#1a1060,#2d1fa3);padding:40px 48px 32px;text-align:center;">
-              <div style="font-size:28px;font-weight:800;color:white;letter-spacing:-0.04em;">EdOS</div>
-              <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,0.65);letter-spacing:0.2em;text-transform:uppercase;margin-top:4px;">The Learning OS</div>
-            </td>
-          </tr>
-          <!-- Body -->
-          <tr>
-            <td style="padding:40px 48px 32px;">
-              <h1 style="margin:0 0 8px;font-size:28px;font-weight:800;color:#081139;letter-spacing:-0.045em;line-height:1.1;">
-                You're on the list! &#127881;
-              </h1>
-              <p style="margin:0 0 24px;font-size:15px;color:#4a5178;line-height:1.6;">
-                Hey ${name.trim()},
-              </p>
-              <p style="margin:0 0 24px;font-size:15px;color:#4a5178;line-height:1.6;">
-                Thanks for joining the EdOS early access waitlist. You're one step closer to a learning experience that actually shows what you understand — not just that you attended.
-              </p>
-              <div style="background:#f0f4ff;border-radius:16px;padding:24px;margin:0 0 28px;">
-                <p style="margin:0 0 12px;font-size:12px;font-weight:700;color:#7c8ccc;letter-spacing:0.15em;text-transform:uppercase;">What to expect</p>
-                <table cellpadding="0" cellspacing="0" width="100%">
-                  <tr>
-                    <td style="padding:6px 0;font-size:14px;color:#1a2050;">&#10003;&nbsp;&nbsp;Early access to EdOS when we launch</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:6px 0;font-size:14px;color:#1a2050;">&#10003;&nbsp;&nbsp;Updates on new features &amp; milestones</td>
-                  </tr>
-                  <tr>
-                    <td style="padding:6px 0;font-size:14px;color:#1a2050;">&#10003;&nbsp;&nbsp;A chance to shape the product as an early user</td>
-                  </tr>
-                </table>
-              </div>
-              <p style="margin:0;font-size:14px;color:#6b75a1;line-height:1.6;">
-                We'll reach out to <strong style="color:#081139;">${email.trim()}</strong> as soon as EdOS is ready for you.
-              </p>
-            </td>
-          </tr>
-          <!-- Footer -->
-          <tr>
-            <td style="padding:20px 48px 36px;border-top:1px solid #eef0f8;">
-              <p style="margin:0;font-size:12px;color:#9ba3c4;text-align:center;">
-                Made with &#9829; by
-                <a href="https://www.porygonsol.com/" style="color:#7c56ef;text-decoration:none;font-weight:700;">Porygon</a>
-              </p>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
+<head><meta charset="UTF-8"/></head>
+<body style="margin:0;padding:0;background:#f0f4ff;font-family:system-ui,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="padding:40px 20px;">
+    <tr><td align="center">
+      <table width="520" cellpadding="0" cellspacing="0" style="max-width:520px;background:white;border-radius:20px;overflow:hidden;box-shadow:0 8px 40px rgba(10,25,90,0.10);">
+        <tr>
+          <td style="background:linear-gradient(135deg,#1a1060,#2d1fa3);padding:36px 40px;text-align:center;">
+            <div style="font-size:26px;font-weight:800;color:white;letter-spacing:-0.04em;">EdOS</div>
+            <div style="font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:0.18em;text-transform:uppercase;margin-top:4px;">The Learning OS</div>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:36px 40px 28px;">
+            <p style="margin:0 0 18px;font-size:22px;font-weight:800;color:#081139;letter-spacing:-0.03em;">Hey ${name.trim()}! &#127881;</p>
+            <p style="margin:0 0 16px;font-size:15px;color:#4a5178;line-height:1.7;">
+              Thank you for your patience — we really appreciate it.
+            </p>
+            <p style="margin:0 0 16px;font-size:15px;color:#4a5178;line-height:1.7;">
+              You're on the <strong style="color:#081139;">EdOS early access waitlist</strong>. We're working hard to get everything ready, and we'll personally let you know the moment our application is ready for you.
+            </p>
+            <p style="margin:0 0 28px;font-size:15px;color:#4a5178;line-height:1.7;">
+              Until then — keep learning. &#128218;
+            </p>
+            <p style="margin:0;font-size:13px;color:#9ba3c4;">
+              — The EdOS team &nbsp;|&nbsp;
+              <a href="https://www.porygonsol.com/" style="color:#7c56ef;text-decoration:none;font-weight:600;">porygonsol.com</a>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:16px 40px 28px;border-top:1px solid #eef0f8;text-align:center;">
+            <p style="margin:0;font-size:11px;color:#c0c8e0;">
+              Made with &#9829; by <a href="https://www.porygonsol.com/" style="color:#7c56ef;text-decoration:none;font-weight:700;">Porygon</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
   </table>
 </body>
-</html>
-    `,
+</html>`,
   });
 
   if (emailError) {
